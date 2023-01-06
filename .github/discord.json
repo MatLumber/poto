@@ -1,9 +1,9 @@
 {
-  "content": "@everyone",
+  "content": "@everyone <@&611644793604538368>",
   "embeds": [
     {
       "title":"MatSploit Actualizado",
-      "description": "MatSploit ha sido actualizado recientemente.",
+      "description": "MatSploit ha sido actualizado recientemente, para recibir la actualización, simplemente abre el Matsploit y debería descargarse por sí misma; posteriormente podrás usar Matsploit.",
       "color": 14745634
     }
   ],
