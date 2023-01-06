@@ -1,0 +1,22 @@
+name: Discord-Update
+
+on: push
+
+jobs:
+  postdiscord:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        
+      - name: Execute webhook if versionzeus.txt changed
+        if: contains(steps.changed-files.outputs.modified_files, 'versionzeus.txt')
+        uses: tsickert/discord-webhook@v5.3.0
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          raw-data: discord.json
